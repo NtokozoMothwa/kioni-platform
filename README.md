@@ -1,25 +1,25 @@
 # kioni-platform
 
-Users (Web / Mobile / API Consumers)
+# Users (Web / Mobile / API Consumers)
         │
         ▼
-Vercel (Next.js Frontend + Edge Middleware)
+## Vercel (Next.js Frontend + Edge Middleware)
         │
         ▼
-API Gateway (Cloudflare Workers / Fastly)  ←→ Rate limiting / WAF
+# API Gateway (Cloudflare Workers / Fastly)  ←→ Rate limiting / WAF
         │
         ▼
-Auth & Identity (Clerk/Auth0) ──> Role-based access
+# Auth & Identity (Clerk/Auth0) ──> Role-based access
         │
         ▼
-Supabase (Postgres + pgvector + Auth + Storage + Realtime)
+# Supabase (Postgres + pgvector + Auth + Storage + Realtime)
         │
         ├─ Edge Functions (low-latency serverless)
         ├─ Postgres (data) + pgvector (embeddings)
         └─ Storage (reports, logs)
         │
         ▼
-Orchestrator / Message Bus (Redis Streams / RabbitMQ / Kafka / BullMQ)
+## Orchestrator / Message Bus (Redis Streams / RabbitMQ / Kafka / BullMQ)
         │
         ├─ Worker Pools (Render / AWS ECS / GCP Cloud Run)
         │     ├─ Scanner Workers (Python: nmap, nuclei, zap)
