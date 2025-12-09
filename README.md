@@ -38,3 +38,30 @@ External integrations:
   - Domain & certificate APIs
   - Threat Feeds & Dark Web APIs
   - Third-party SIEMs (optional)
+###
+###
+kioni/
+│
+├── apps/
+│   ├── web/                # Next.js (Vercel)
+│   └── admin/              # (Optional) Admin dashboard
+│
+├── services/
+│   ├── scanner/            # Python scanner worker
+│   ├── brain/              # AI orchestrator worker (Node.js)
+│   └── api/                # API gateway (Edge + Node mix)
+│
+├── packages/
+│   ├── ui/                 # Shared React UI components
+│   ├── utils/              # Shared TypeScript utilities
+│   └── config/             # Shared configs/env loaders
+│
+├── infra/
+│   ├── docker/             # Dockerfiles and compose
+│   ├── terraform/          # optional IaC
+│   └── scripts/            # deployment/help scripts
+│
+├── .github/workflows/      # CI/CD pipelines
+├── package.json
+├── pnpm-workspace.yaml
+└── README.md
