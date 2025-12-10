@@ -1,0 +1,5 @@
+nmap
+requests
+python-dotenv
+supabase
+redis
