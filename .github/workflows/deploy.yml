@@ -1,0 +1,21 @@
+name: KIONI CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build apps
+        run: pnpm -r build
